@@ -1,0 +1,6 @@
+<%- @relay_domains.each do |domain| -%>
+        <%--%><%= domain %>     smtp:[<%= @local_mx %>]
+<%- end -%>
+<%- if @smarthost -%>
+        <%--%>*         smtp:[<%= @smarthost %>]
+<%- end -%>
